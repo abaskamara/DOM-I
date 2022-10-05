@@ -72,4 +72,26 @@ topCont.children[1].children[1].textContent = siteContent['main-content']['about
 
 //BOTTOM CONTENT
 const bottomCont = document.querySelector('.bottom-content')
-console.log(bottomCont)
+const h4Bottoms = bottomCont.querySelectorAll('h4')
+h4Bottoms[0].textContent = siteContent['main-content']['services-h4']
+h4Bottoms[1].textContent = siteContent['main-content']['product-h4']
+h4Bottoms[2].textContent = siteContent['main-content']['vision-h4']
+
+const bottomParas = bottomCont.querySelectorAll('p')
+bottomParas[0].textContent = siteContent['main-content']['services-content']
+bottomParas[1].textContent = siteContent['main-content']['product-content']
+bottomParas[2].textContent = siteContent['main-content']['vision-content']
+
+//SECTION CTA
+const h1 = document.querySelector('.cta h1')
+h1.textContent = siteContent.cta.h1
+const button = document.querySelector('button')
+button.textContent = siteContent.cta.button
+
+//NAV
+const navLinks = document.querySelectorAll('header nav a')
+const navText = Object.values(siteContent.nav)
+navLinks.forEach((link, index) => {
+  link.textContent = navText[index]
+  link.classList.add('italic')
+})
