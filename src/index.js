@@ -40,3 +40,36 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 };
 
 console.log('project wired!')
+
+//IMAGES
+const logoImg = document.querySelector('#logo-img')
+logoImg.src = siteContent.images['logo-img']
+
+const ctaImg = document.querySelector('#cta-img')
+ctaImg.src = siteContent.images['cta-img']
+
+const middleImg = document.querySelector('#middle-img')
+middleImg.src = siteContent.images['accent-img']
+
+//FOOTER SECTION
+const footer = document.querySelector('footer a')
+footer.textContent = siteContent.footer.copyright
+footer.classList.add('bold')
+
+//CONTACTS SECTION
+const contacts = document.querySelector('section.contact')
+contacts.querySelector('h4').textContent = siteContent.contact['contact-h4']
+contacts.querySelector('p').textContent = siteContent.contact['address']
+contacts.children[2].textContent = siteContent.contact['phone']
+contacts.children[3].textContent = siteContent.contact['email']
+
+//TOP CONTENT
+const topCont = document.querySelector('.top-content')
+topCont.children[0].children[0].textContent = siteContent['main-content']['features-h4']
+topCont.children[0].children[1].textContent = siteContent['main-content']['features-content']
+topCont.children[1].children[0].textContent = siteContent['main-content']['about-h4']
+topCont.children[1].children[1].textContent = siteContent['main-content']['about-content']
+
+//BOTTOM CONTENT
+const bottomCont = document.querySelector('.bottom-content')
+console.log(bottomCont)
